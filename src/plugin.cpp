@@ -7,7 +7,7 @@ Plugin* pluginInstance;
 void init(Plugin* p) {
 	pluginInstance = p;
 
-	p->addModel(modelDifferentialSequencer);
+	p->addModel(modelSerialia);
 
 
 	// Add modules here
