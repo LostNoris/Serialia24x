@@ -1,6 +1,6 @@
 {
-  "slug": "Serialia",
-  "name": "Serialia",
+  "slug": "Serialia24x",
+  "name": "Serialia24x",
   "version": "2.0.0",
   "license": "proprietary",
   "brand": "Sellers",
@@ -14,8 +14,8 @@
   "changelogUrl": "",
   "modules": [
     {
-      "slug": "Serialia",
-      "name": "Serialia",
+      "slug": "Serialia24x",
+      "name": "Serialia24x",
       "description": "",
       "tags": []
     }

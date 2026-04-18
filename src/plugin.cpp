@@ -7,7 +7,7 @@ Plugin* pluginInstance;
 void init(Plugin* p) {
 	pluginInstance = p;
 
-	p->addModel(modelSerialia);
+	p->addModel(modelSerialia24x);
 
 
 	// Add modules here

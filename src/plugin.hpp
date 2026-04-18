@@ -6,7 +6,7 @@
 using namespace rack;
 
 // Declare the Plugin, defined in plugin.cpp
-extern Model* modelSerialia;
+extern Model* modelSerialia24x;
 
 
 extern Plugin* pluginInstance;
