@@ -223,7 +223,7 @@ struct Serialia24x : Module {
 				step3 = (step3 + 1) % rowLength;
 			}
 		}
-		for (int i = 0; i < rowLength; i++) {
+		for (int i = 0; i < 24; i++) {
 
 			float value = params[VALUE_PARAM + i].getValue();
 
@@ -240,13 +240,15 @@ struct Serialia24x : Module {
 				params[VALUE_PARAM + i].setValue(pitch);
 			}
 
+	
+
 			if (value != lastParams[i]) {
 				
 				int newValue = value;
 				int oldValue = toneRow[i];
 
 				int clash = -1;
-				for (int j = 0; j < rowLength; j++) {
+				for (int j = 0; j < 24; j++) {
 					if (toneRow[j] == newValue) {
 						clash = j;
 						break;
@@ -386,7 +388,7 @@ struct Serialia24xWidget : ModuleWidget {
 
 		for (int i = 0; i < 3; i++) {
 			float x = 15.5f + i * 10.f;
-			float z = 120.f + i * 10.f;
+			float z = 125.f + i * 10.f;
 
 			addInput(createInputCentered<PJ301MPort>(
 				mm2px(Vec(x, 110)),
@@ -402,7 +404,7 @@ struct Serialia24xWidget : ModuleWidget {
 		}
 
 		for (int i = 0; i < 12; i++) {
-			float x = 51.f + i * 6.f;
+			float x = 48.f + i * 6.f;
 
 			addChild(createLightCentered<MediumLight<GreenLight>>(
 				mm2px(Vec(x, 115)), module,
@@ -421,111 +423,111 @@ struct Serialia24xWidget : ModuleWidget {
 		// Invert and Retrograde controls 1
 
 		addParam(createParamCentered<LEDButton>(
-			mm2px(Vec(40.5f, 90)),
+			mm2px(Vec(40.5f, 80)),
 			module,
 			Serialia24x::INVERT_BUTTON
 		));
 
         addInput(createInputCentered<PJ301MPort>(
-			mm2px(Vec(40.5f, 98)),
+			mm2px(Vec(40.5f, 90)),
 			module,
 			Serialia24x::INVERT_INPUT
 		));
 
 		addChild(createLightCentered<MediumLight<BlueLight>>(
-			mm2px(Vec(40.5f, 106)), 
+			mm2px(Vec(40.5f, 98)), 
 			module,
 			Serialia24x::INVERT_LIGHT
 		));
 
 		addParam(createParamCentered<LEDButton>(
-			mm2px(Vec(50.5f, 90)),
+			mm2px(Vec(50.5f, 80)),
 			module,
 			Serialia24x::RETROGRADE_BUTTON
 		));
 
         addInput(createInputCentered<PJ301MPort>(
-			mm2px(Vec(50.5f, 98)),
+			mm2px(Vec(50.5f, 90)),
 			module,
 			Serialia24x::RETROGRADE_INPUT
 		));
 
 		addChild(createLightCentered<MediumLight<RedLight>>(
-			mm2px(Vec(50.5f, 106)), module,
+			mm2px(Vec(50.5f, 98)), module,
 			Serialia24x::RETROGRADE_LIGHT
 		));
 
         // Invert and Retrograde controls 2
 
 		addParam(createParamCentered<LEDButton>(
-			mm2px(Vec(76, 90)),
+			mm2px(Vec(76, 80)),
 			module,
 			Serialia24x::INVERT2_BUTTON
 		));
 
 		addInput(createInputCentered<PJ301MPort>(
-			mm2px(Vec(76, 98)),
+			mm2px(Vec(76, 90)),
 			module,
 			Serialia24x::INVERT2_INPUT
 		));
 
 		addChild(createLightCentered<MediumLight<BlueLight>>(
-			mm2px(Vec(76, 106)),
+			mm2px(Vec(76, 98)),
 			module,
 			Serialia24x::INVERT2_LIGHT
 		));
 
 		addParam(createParamCentered<LEDButton>(
-			mm2px(Vec(86, 90)),
+			mm2px(Vec(86, 80)),
 			module,
 			Serialia24x::RETROGRADE2_BUTTON
 		));
 
 		addInput(createInputCentered<PJ301MPort>(
-			mm2px(Vec(86, 98)),
+			mm2px(Vec(86, 90)),
 			module,
 			Serialia24x::RETROGRADE2_INPUT
 		));
 
 		addChild(createLightCentered<MediumLight<RedLight>>(
-			mm2px(Vec(86, 106)), module,
+			mm2px(Vec(86, 98)), module,
 			Serialia24x::RETROGRADE2_LIGHT
 		));
 		
 		//Invert and Retrograde controls 3
 
 		addParam(createParamCentered<LEDButton>(
-			mm2px(Vec(121.5f, 90)),
+			mm2px(Vec(112.5f, 80)),
 			module,
 			Serialia24x::INVERT3_BUTTON
 		));
 
 		addInput(createInputCentered<PJ301MPort>(
-			mm2px(Vec(121.5f, 98)),
+			mm2px(Vec(112.5f, 90)),
 			module,
 			Serialia24x::INVERT3_INPUT
 		));
 
 		addChild(createLightCentered<MediumLight<BlueLight>>(
-			mm2px(Vec(121.5f, 106)),
+			mm2px(Vec(112.5f, 98)),
 			module,
 			Serialia24x::INVERT3_LIGHT
 		));
 
 		addParam(createParamCentered<LEDButton>(
-			mm2px(Vec(131.5f, 90)),
+			mm2px(Vec(122.5f, 80)),
 			module,
 			Serialia24x::RETROGRADE3_BUTTON
 		));
 
 		addInput(createInputCentered<PJ301MPort>(
-			mm2px(Vec(131.5f, 98)),
+			mm2px(Vec(122.5f, 90)),
 			module,
 			Serialia24x::RETROGRADE3_INPUT
 		));
 
 		addChild(createLightCentered<MediumLight<RedLight>>(
-			mm2px(Vec(131.5f, 106)), module,
+			mm2px(Vec(122.5f, 98)), module,
 			Serialia24x::RETROGRADE3_LIGHT
 		));
 
